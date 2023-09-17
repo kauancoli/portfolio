@@ -5,12 +5,13 @@ declare module 'styled-components' {
     title: string;
 
     colors: {
-      backgroundColor: string;
+      brand: string;
 
-      titleColor: string;
-      textColor: string;
+      dark10: string;
+      dark20: string;
 
-      elementColor: string;
+      title: string;
+      text: string;
     };
   }
 }

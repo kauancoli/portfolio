@@ -2,11 +2,12 @@ export default {
   title: 'dark',
 
   colors: {
-    backgroundColor: '#010326',
+    brand: '#9A21FA',
 
-    titleColor: '#0540F2',
-    textColor: '#056CF2',
+    dark10: '#121212',
+    dark20: '#151515',
 
-    elementColor: '#8C0745',
+    title: '#FFFFFF',
+    text: '#C4C4C4',
   },
 };

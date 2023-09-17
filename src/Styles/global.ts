@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
    *{
@@ -38,3 +38,42 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
+
+//Button Component
+export const Button = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 6.4rem;
+  gap: 2.4rem;
+
+  a,
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.title};
+
+    border: 2px solid ${({ theme }) => theme.colors.brand};
+    border-radius: 0.4rem;
+
+    cursor: pointer;
+
+    width: 144px;
+    height: 40px;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  button:disabled {
+    border: 2px solid ${({ theme }) => theme.colors.title};
+    opacity: 0.3;
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+`;
