@@ -1,35 +1,8 @@
-import { PhosphorLogo } from '@phosphor-icons/react';
-import {
-  SiExpress,
-  SiFrontendmentor,
-  SiGithub,
-  SiJavascript,
-  SiMongodb,
-  SiNodedotjs,
-  SiReact,
-  SiStyledcomponents,
-  SiTailwindcss,
-  SiTypescript,
-  SiVercel,
-  SiVite,
-} from 'react-icons/si';
+// src/components/Projects.tsx
+import { SiGithub, SiVercel } from 'react-icons/si';
 import styled from 'styled-components';
 import { Button } from '../../Styles/global';
-
-const technologyIcons: Record<string, React.ReactNode> = {
-  Vercel: <SiVercel />,
-  React: <SiReact />,
-  TypeScript: <SiTypescript />,
-  StyledComponents: <SiStyledcomponents />,
-  FrontendMentor: <SiFrontendmentor />,
-  Vite: <SiVite />,
-  NodeJS: <SiNodedotjs />,
-  Phosphor: <PhosphorLogo />,
-  MongoDB: <SiMongodb />,
-  Express: <SiExpress />,
-  Tailwindcss: <SiTailwindcss />,
-  Javascript: <SiJavascript />,
-};
+import { technologyIcons } from './Icons';
 
 const projectsData = [
   {

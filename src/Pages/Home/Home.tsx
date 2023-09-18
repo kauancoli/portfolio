@@ -1,13 +1,14 @@
-import * as S from './Styles';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import dark from '../../Styles/dark';
 import light from '../../Styles/light';
-import { useState } from 'react';
-import Navbar from '../Components/NavBar';
-import Header from '../Components/Header';
 import AboutMe from '../Components/AboutMe';
 import Experiences from '../Components/Experiences';
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
+import Navbar from '../Components/NavBar';
 import Projects from '../Components/Projects';
+import * as S from './Styles';
 
 function Home() {
   const [theme, setTheme] = useState(dark);
@@ -26,8 +27,8 @@ function Home() {
         <AboutMe />
         <Experiences />
         <Projects />
+        <Footer />
       </S.Container>
-      ;
     </ThemeProvider>
   );
 }
