@@ -17,8 +17,6 @@ function Home() {
     theme === dark ? setTheme(light) : setTheme(dark);
   };
 
-  console.log(toggleTheme);
-
   return (
     <ThemeProvider theme={theme}>
       <S.Container>

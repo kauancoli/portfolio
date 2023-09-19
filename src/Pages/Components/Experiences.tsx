@@ -1,6 +1,5 @@
 // src/components/Experiences.tsx
 import { useState } from 'react';
-import { SiReact } from 'react-icons/si';
 import styled from 'styled-components';
 import { technologyIcons } from './Icons';
 
@@ -24,6 +23,10 @@ const ExperiencesWrapper = styled.section`
   @media screen and (min-width: 1024px) {
     padding: 10rem 18rem;
   }
+
+  @media screen and (min-width: 1660px) {
+    padding: 10rem 22rem;
+  }
 `;
 
 const Title = styled.h1`
@@ -32,6 +35,10 @@ const Title = styled.h1`
   margin-bottom: 2.4rem;
 
   color: ${({ theme }) => theme.colors.title};
+
+  @media screen and (min-width: 1660px) {
+    font-size: 3rem;
+  }
 `;
 
 const TabsWrapper = styled.div`
@@ -71,19 +78,23 @@ const Tab = styled.div<{ isSelected: boolean }>`
 
   @media screen and (min-width: 1024px) {
     text-align: left;
-
     font-size: 1.8rem;
 
     width: 20rem;
     max-height: 6rem;
-
     padding: 2rem 1.5rem;
 
     border-left: ${({ isSelected }) =>
       isSelected ? '3px solid #9A21FA' : '3px solid #151515'};
     border-bottom: none;
-
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1660px) {
+    font-size: 2.2rem;
+
+    width: 24rem;
+    max-height: 7rem;
   }
 `;
 
@@ -104,12 +115,20 @@ const ContentWrapper = styled.div`
     @media screen and (min-width: 1024px) {
       font-size: 2.4rem;
     }
+    @media screen and (min-width: 1660px) {
+      font-size: 3rem;
+      margin-bottom: 2.4rem;
+    }
   }
 
   div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.6rem;
+
+    @media screen and (min-width: 1660px) {
+      margin-bottom: 2.4rem;
+    }
 
     p {
       font-size: 1.4rem;
@@ -124,6 +143,9 @@ const ContentWrapper = styled.div`
       @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
       }
+      @media screen and (min-width: 1660px) {
+        font-size: 2rem;
+      }
     }
     .brand {
       color: ${({ theme }) => theme.colors.brand};
@@ -134,6 +156,7 @@ const ContentWrapper = styled.div`
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 2.8rem;
+    text-align: justify;
 
     color: ${({ theme }) => theme.colors.text};
 
@@ -142,6 +165,9 @@ const ContentWrapper = styled.div`
 
     @media screen and (min-width: 1024px) {
       font-size: 1.8rem;
+    }
+    @media screen and (min-width: 1660px) {
+      font-size: 2.2rem;
     }
   }
 `;
@@ -153,10 +179,19 @@ const Technologies = styled.div`
   font-size: 10rem;
 
   color: ${({ theme }) => theme.colors.brand};
+
+  @media screen and (min-width: 1660px) {
+    font-size: 15rem;
+  }
 `;
 
 const Tooltip = styled.span`
   position: relative;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
 
   .tooltiptext {
     visibility: hidden;
@@ -218,8 +253,13 @@ const Experiences = () => {
                 <p>Dez 2022 - Ago 2023</p>
               </div>
               <p>
-                Atuei na criação e refatoração de códigos Front-End com foco
-                principalmente em: React, TypeScript, NextJS e React Native.
+                Atuei na criação e aprimoramento de códigos Front-End, com foco
+                principal nas seguintes tecnologias: React, TypeScript, Next.js
+                e React Native. Minhas responsabilidades incluíram o
+                desenvolvimento de interfaces de usuário atraentes e funcionais,
+                a implementação de recursos interativos e responsivos, bem como
+                a integração de APIs e serviços back-end para garantir uma
+                experiência perfeita para o usuário final.
               </p>
               <Technologies>
                 <Tooltip className="tooltip">

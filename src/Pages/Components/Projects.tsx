@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     name: 'Rest Countries API',
     description:
-      'Frontend Mentor - REST Countries API with color theme switcher solution',
+      'Frontend Mentor - REST Countries API with color theme switcher - Solução do desafio do Frontend Mentor',
     technologies: [
       'React',
       'TypeScript',
@@ -59,7 +59,7 @@ const projectsData = [
       'StyledComponents',
       'Phosphor',
     ],
-    imageSrc: 'imagem_projeto_4.jpg',
+    imageSrc: 'Portfolio.png',
     deploy: '#',
     repo: 'https://github.com/kauancoli/portfolio',
   },
@@ -69,6 +69,17 @@ const ProjectsWrapper = styled.section`
   padding: 2.4rem;
 
   background-color: ${({ theme }) => theme.colors.dark20};
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 10rem 18rem;
+  }
+
+  @media screen and (min-width: 1660px) {
+    padding: 14rem 22rem;
+  }
 `;
 
 const Title = styled.h1`
@@ -77,12 +88,30 @@ const Title = styled.h1`
   margin-bottom: 2.4rem;
 
   color: ${({ theme }) => theme.colors.title};
+
+  @media screen and (min-width: 1660px) {
+    font-size: 3rem;
+  }
+`;
+
+const ProjectsGrid = styled.div`
+  display: block;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem;
+  }
 `;
 
 const Project = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3rem 0;
+  justify-content: space-between;
 `;
 
 const Image = styled.img`
@@ -92,6 +121,23 @@ const Image = styled.img`
   margin-bottom: 1rem;
 
   border-left: ${({ theme }) => theme.colors.brand} 3px solid;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 500px;
+    max-height: 500px;
+
+    border-left: ${({ theme }) => theme.colors.brand} 5px solid;
+  }
+
+  @media screen and (min-width: 1660px) {
+    max-width: 700px;
+    max-height: 700px;
+
+    border-left: ${({ theme }) => theme.colors.brand} 7px solid;
+  }
 `;
 
 const Name = styled.h3`
@@ -100,6 +146,17 @@ const Name = styled.h3`
   margin-bottom: 1.6rem;
 
   color: ${({ theme }) => theme.colors.title};
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.4rem;
+    margin-top: 3rem;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 3rem;
+  }
 `;
 
 const Description = styled.p`
@@ -108,6 +165,17 @@ const Description = styled.p`
   margin-bottom: 1.6rem;
 
   color: ${({ theme }) => theme.colors.text};
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 2rem;
+  }
 `;
 
 const Technologies = styled.div`
@@ -118,6 +186,18 @@ const Technologies = styled.div`
   font-size: 5rem;
 
   color: ${({ theme }) => theme.colors.brand};
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 10rem;
+    gap: 3rem;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 14rem;
+    gap: 4rem;
+  }
 `;
 
 const Tooltip = styled.span`
@@ -153,46 +233,48 @@ const Projects = () => {
   return (
     <ProjectsWrapper>
       <Title>PROJETOS</Title>
-      {projectsData.map((p) => (
-        <Project key={p.id}>
-          <Image src={p.imageSrc} alt={p.name} />
-          <Name>{p.name}</Name>
-          <Description>{p.description}</Description>
+      <ProjectsGrid>
+        {projectsData.map((p) => (
+          <Project key={p.id}>
+            <Image src={p.imageSrc} alt={p.name} />
+            <Name>{p.name}</Name>
+            <Description>{p.description}</Description>
 
-          <Technologies>
-            {p.technologies.map((tech) => (
-              <Tooltip key={tech} className="tooltip">
-                {technologyIcons[tech]}
-                <span className="tooltiptext">{tech}</span>
-              </Tooltip>
-            ))}
-          </Technologies>
+            <Technologies>
+              {p.technologies.map((tech) => (
+                <Tooltip key={tech} className="tooltip">
+                  {technologyIcons[tech]}
+                  <span className="tooltiptext">{tech}</span>
+                </Tooltip>
+              ))}
+            </Technologies>
 
-          <Button style={{ marginTop: '4rem' }}>
-            {p.deploy !== '#' ? (
-              <a href={p.deploy} target="_blank" rel="noopener noreferrer">
-                <SiVercel />
-                Deploy
-              </a>
-            ) : (
-              <button disabled={true}>
-                <SiVercel />
-                Deploy
-              </button>
-            )}
-            {p.repo !== '#' ? (
-              <a href={p.repo} target="_blank" rel="noopener noreferrer">
-                <SiGithub />
-                Repositorio
-              </a>
-            ) : (
-              <button disabled={true}>
-                <SiGithub />
-              </button>
-            )}
-          </Button>
-        </Project>
-      ))}
+            <Button style={{ marginTop: '4rem' }}>
+              {p.deploy !== '#' ? (
+                <a href={p.deploy} target="_blank" rel="noopener noreferrer">
+                  <SiVercel />
+                  Deploy
+                </a>
+              ) : (
+                <button disabled={true}>
+                  <SiVercel />
+                  Deploy
+                </button>
+              )}
+              {p.repo !== '#' ? (
+                <a href={p.repo} target="_blank" rel="noopener noreferrer">
+                  <SiGithub />
+                  Repositorio
+                </a>
+              ) : (
+                <button disabled={true}>
+                  <SiGithub />
+                </button>
+              )}
+            </Button>
+          </Project>
+        ))}
+      </ProjectsGrid>
     </ProjectsWrapper>
   );
 };

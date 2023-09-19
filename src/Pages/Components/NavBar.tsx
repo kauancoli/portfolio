@@ -11,6 +11,7 @@ const NavbarWrapper = styled.nav`
   .port {
     font-weight: 500;
     font-size: 1.8rem;
+    user-select: none;
     color: ${({ theme }) => theme.colors.brand};
   }
 
@@ -32,13 +33,19 @@ const NavbarWrapper = styled.nav`
     padding: 4rem 18rem;
 
     .port {
-      font-weight: 500;
       font-size: 2.4rem;
-      color: ${({ theme }) => theme.colors.brand};
     }
 
     .menu {
       display: none;
+    }
+  }
+
+  @media screen and (min-width: 1660px) {
+    padding: 4rem 22rem;
+
+    .port {
+      font-size: 3.2rem;
     }
   }
 `;
@@ -46,6 +53,7 @@ const NavbarWrapper = styled.nav`
 const TextMenu = styled.div`
   display: none;
   color: ${({ theme }) => theme.colors.text};
+  user-select: none;
 
   @media screen and (min-width: 1024px) {
     display: flex;
@@ -55,6 +63,14 @@ const TextMenu = styled.div`
       font-size: 1.8rem;
       font-weight: 400;
       cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 1660px) {
+    gap: 7rem;
+
+    span {
+      font-size: 2.4rem;
     }
   }
 `;

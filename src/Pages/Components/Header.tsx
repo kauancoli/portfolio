@@ -14,6 +14,9 @@ const HeaderWrapper = styled.header`
   @media screen and (min-width: 1024px) {
     padding: 16rem 18rem;
   }
+  @media screen and (min-width: 1660px) {
+    padding: 14rem 22rem;
+  }
 `;
 
 const NameHeader = styled.p`
@@ -26,13 +29,16 @@ const NameHeader = styled.p`
 
   @media screen and (min-width: 1024px) {
     font-size: 2.4rem;
-    font-weight: 600;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 3.2rem;
   }
 `;
 
 const NameTitle = styled.h1`
   font-size: 3.2rem;
   margin: 0.8rem 0;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.brand};
 
   @media screen and (min-width: 768px) {
@@ -40,7 +46,9 @@ const NameTitle = styled.h1`
 
   @media screen and (min-width: 1024px) {
     font-size: 6.4rem;
-    font-weight: 600;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 10rem;
   }
 `;
 
@@ -50,8 +58,14 @@ const Image = styled.div`
   img {
     border: 0.2rem solid ${({ theme }) => theme.colors.brand};
     border-radius: 0.8rem;
-  }
 
+    @media screen and (min-width: 1024px) {
+      width: 400px;
+    }
+    @media screen and (min-width: 1660px) {
+      width: 500px;
+    }
+  }
   @media screen and (min-width: 1024px) {
     display: block;
   }
@@ -91,7 +105,7 @@ const Header = () => {
           </Button>
         </div>
         <Image>
-          <img src="Me.jpg" width={400} alt="hero" />
+          <img src="Me.jpg" alt="hero" />
         </Image>
       </div>
     </HeaderWrapper>

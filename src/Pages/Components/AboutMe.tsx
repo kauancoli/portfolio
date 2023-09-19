@@ -5,7 +5,7 @@ import { Button } from '../../Styles/global';
 import Curriculo from '/Curriculo_Kauan.pdf';
 
 const AboutMeWrapper = styled.section`
-  text-align: left;
+  text-align: justify;
   padding: 2.4rem;
 
   background-color: ${({ theme }) => theme.colors.dark20};
@@ -22,14 +22,19 @@ const AboutMeWrapper = styled.section`
       flex-direction: row;
       gap: 7.6rem;
     }
+    @media screen and (min-width: 1660px) {
+      justify-content: space-between;
+    }
   }
 
   @media screen and (min-width: 768px) {
     padding: 4.8rem;
   }
-
   @media screen and (min-width: 1024px) {
     padding: 10rem 15rem;
+  }
+  @media screen and (min-width: 1660px) {
+    padding: 10rem 22rem;
   }
 `;
 
@@ -46,6 +51,9 @@ const Title = styled.h1`
   @media screen and (min-width: 1024px) {
     margin-bottom: 3.2rem;
   }
+  @media screen and (min-width: 1660px) {
+    font-size: 3rem;
+  }
 `;
 
 const Head = styled.p`
@@ -59,6 +67,9 @@ const Head = styled.p`
 
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
+  }
+  @media screen and (min-width: 1660px) {
+    font-size: 2.4rem;
   }
 `;
 
@@ -81,6 +92,12 @@ const Description = styled.p`
 
     max-width: 50rem;
   }
+  @media screen and (min-width: 1660px) {
+    font-size: 2rem;
+    line-height: 4rem;
+
+    max-width: 70rem;
+  }
 
   li {
     font-size: 1rem;
@@ -95,6 +112,11 @@ const Description = styled.p`
       font-size: 1.6rem;
       font-weight: 300;
       line-height: 3.2rem;
+    }
+
+    @media screen and (min-width: 1660px) {
+      font-size: 2rem;
+      line-height: 4rem;
     }
   }
 `;
@@ -119,8 +141,7 @@ const AboutMe = () => {
           <Head>Formação Acadêmica</Head>
           <Description>
             <li>
-              Cursando: FATEC Baixada Santista Rubens Lara - Sistemas Para
-              Internet <br />
+              FATEC Baixada Santista Rubens Lara - Sistemas Para Internet <br />
               (Fev 2022 - Dez 2024)
             </li>
             <li>Curso Origamid - Front-End | UX / UI Design (Jan 2022)</li>

@@ -9,13 +9,15 @@ const GlobalStyle = createGlobalStyle`
        font-family: 'Inter', sans-serif;       
        font-size: 62.5%;
 
+
        a{
          text-decoration:none;
        }
 
    }
    #root{
-       margin:0 auto;
+       margin: 0 auto;
+
    }
 
    ::-webkit-scrollbar {
@@ -73,11 +75,28 @@ export const Button = styled.div`
 
       font-size: 1.6rem;
     }
+
+    @media screen and (min-width: 1660px) {
+      width: 200px;
+      height: 70px;
+
+      font-size: 1.8rem;
+    }
   }
 
   button:disabled {
     border: 2px solid ${({ theme }) => theme.colors.title};
     opacity: 0.3;
+  }
+
+  button:hover {
+    background-color: ${({ theme }) => theme.colors.brand};
+    opacity: 0.8;
+  }
+
+  a:hover {
+    background-color: ${({ theme }) => theme.colors.brand};
+    opacity: 0.8;
   }
 
   svg {
@@ -93,5 +112,9 @@ export const Button = styled.div`
     align-items: center;
 
     margin-top: 6rem;
+  }
+
+  @media screen and (min-width: 1660px) {
+    margin-top: 8rem;
   }
 `;
