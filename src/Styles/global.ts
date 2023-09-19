@@ -69,7 +69,7 @@ export const Button = styled.div`
     font-size: 1.4rem;
     font-weight: 600;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       width: 155px;
       height: 45px;
 
@@ -104,13 +104,13 @@ export const Button = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 8rem;
+  }
 
+  @media screen and (min-width: 1280px) {
     margin-top: 6rem;
   }
 

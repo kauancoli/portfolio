@@ -11,10 +11,7 @@ const FooterWrapper = styled.footer`
   font-size: 1.4rem;
   font-weight: 400;
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 1.6rem;
   }
 

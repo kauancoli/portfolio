@@ -71,9 +71,10 @@ const ProjectsWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.dark20};
 
   @media screen and (min-width: 768px) {
+    padding: 4.8rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 10rem 18rem;
   }
 
@@ -97,10 +98,7 @@ const Title = styled.h1`
 const ProjectsGrid = styled.div`
   display: block;
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7rem;
@@ -122,10 +120,7 @@ const Image = styled.img`
 
   border-left: ${({ theme }) => theme.colors.brand} 3px solid;
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     max-width: 500px;
     max-height: 500px;
 
@@ -133,7 +128,7 @@ const Image = styled.img`
   }
 
   @media screen and (min-width: 1660px) {
-    max-width: 700px;
+    max-width: 600px;
     max-height: 700px;
 
     border-left: ${({ theme }) => theme.colors.brand} 7px solid;
@@ -148,9 +143,10 @@ const Name = styled.h3`
   color: ${({ theme }) => theme.colors.title};
 
   @media screen and (min-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 2.4rem;
     margin-top: 3rem;
   }
@@ -167,10 +163,9 @@ const Description = styled.p`
   color: ${({ theme }) => theme.colors.text};
 
   @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
     font-size: 1.6rem;
+  }
+  @media screen and (min-width: 1280px) {
     margin-bottom: 1rem;
   }
   @media screen and (min-width: 1660px) {
@@ -188,9 +183,11 @@ const Technologies = styled.div`
   color: ${({ theme }) => theme.colors.brand};
 
   @media screen and (min-width: 768px) {
+    font-size: 8rem;
+    gap: 2.5rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 10rem;
     gap: 3rem;
   }
@@ -221,6 +218,11 @@ const Tooltip = styled.span`
 
     border-radius: 0.4rem;
     padding: 1.2rem;
+
+    @media screen and (min-width: 1660px) {
+      font-size: 1.6rem;
+      bottom: 90%;
+    }
   }
 
   &:hover .tooltiptext {
@@ -231,7 +233,7 @@ const Tooltip = styled.span`
 
 const Projects = () => {
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projects">
       <Title>PROJETOS</Title>
       <ProjectsGrid>
         {projectsData.map((p) => (

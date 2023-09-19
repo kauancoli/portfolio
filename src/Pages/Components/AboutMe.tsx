@@ -16,9 +16,11 @@ const AboutMeWrapper = styled.section`
     gap: 0.8rem;
 
     @media screen and (min-width: 768px) {
+      flex-direction: row;
+      gap: 2rem;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       flex-direction: row;
       gap: 7.6rem;
     }
@@ -30,7 +32,7 @@ const AboutMeWrapper = styled.section`
   @media screen and (min-width: 768px) {
     padding: 4.8rem;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 10rem 15rem;
   }
   @media screen and (min-width: 1660px) {
@@ -46,9 +48,10 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.title};
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 1.6rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 3.2rem;
   }
   @media screen and (min-width: 1660px) {
@@ -63,9 +66,10 @@ const Head = styled.p`
   color: ${({ theme }) => theme.colors.title};
 
   @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 2rem;
   }
   @media screen and (min-width: 1660px) {
@@ -82,15 +86,26 @@ const Description = styled.p`
   color: ${({ theme }) => theme.colors.text};
 
   @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 1.6rem;
+
+    max-width: 50rem;
+
+    @media screen and (min-width: 950px) {
+      max-width: 70rem;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 85rem;
+    }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 1.6rem;
-    font-weight: 300;
     line-height: 3.2rem;
     margin-top: 2.1rem;
 
-    max-width: 50rem;
+    max-width: 65rem;
   }
   @media screen and (min-width: 1660px) {
     font-size: 2rem;
@@ -105,12 +120,12 @@ const Description = styled.p`
     white-space: normal;
 
     @media screen and (min-width: 768px) {
-      white-space: normal;
+      font-size: 1.2rem;
+      line-height: 2rem;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       font-size: 1.6rem;
-      font-weight: 300;
       line-height: 3.2rem;
     }
 
@@ -123,18 +138,18 @@ const Description = styled.p`
 
 const AboutMe = () => {
   return (
-    <AboutMeWrapper>
+    <AboutMeWrapper id="about-me">
       <Title>SOBRE MIM</Title>
       <div className="container">
         <div>
           <Head>São Vicente, Brasil</Head>
           <Description>
-            Formado em Técnico de Desenvolvimento de Sistemas e atualmente curso
-            Sistemas para Internet na Fatec Rubens Lara. Elaborei diversos
-            trabalhos de Desenvolvimento Web utilizando WordPress + Elementor,
-            MySQL, aliados com PHP e JavaScript. Atualmente trabalho como
-            Desenvolvedor Front-End utilizando principalmente JavaScript, React,
-            TypeScript e NodeJS.
+            Tenho experiência no desenvolvimento web, trabalhando com WordPress,
+            Elementor, MySQL, PHP e JavaScript. Atualmente, atuo como
+            Desenvolvedor Front-End, concentrando-me em JavaScript, React,
+            TypeScript e Node.js. Estou constantemente buscando aprender novas
+            tecnologias, com foco atual em aprimorar o TypeScript e explorando o
+            Node.js, além de outras tecnologias relacionadas ao BackEnd.
           </Description>
         </div>
         <div>
@@ -158,10 +173,13 @@ const AboutMe = () => {
           <CloudArrowDown size={20} />
           Currículo
         </a>
-        <button>
+        <a
+          href="https://api.whatsapp.com/send?phone=5513988699197"
+          target="_blank"
+        >
           <WhatsappLogo size={20} />
           Telefone
-        </button>
+        </a>
       </Button>
     </AboutMeWrapper>
   );

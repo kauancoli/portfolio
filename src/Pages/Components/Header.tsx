@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
     padding: 4.8rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 16rem 18rem;
   }
   @media screen and (min-width: 1660px) {
@@ -25,9 +25,10 @@ const NameHeader = styled.p`
   color: ${({ theme }) => theme.colors.title};
 
   @media screen and (min-width: 768px) {
+    font-size: 2rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 2.4rem;
   }
   @media screen and (min-width: 1660px) {
@@ -42,9 +43,10 @@ const NameTitle = styled.h1`
   color: ${({ theme }) => theme.colors.brand};
 
   @media screen and (min-width: 768px) {
+    font-size: 4rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     font-size: 6.4rem;
   }
   @media screen and (min-width: 1660px) {
@@ -59,21 +61,25 @@ const Image = styled.div`
     border: 0.2rem solid ${({ theme }) => theme.colors.brand};
     border-radius: 0.8rem;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
+      width: 250px;
+    }
+
+    @media screen and (min-width: 1280px) {
       width: 400px;
     }
     @media screen and (min-width: 1660px) {
       width: 500px;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 `;
 
 const Header = () => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper id="home">
       <div
         style={{
           display: 'flex',

@@ -24,12 +24,16 @@ const NavbarWrapper = styled.nav`
   @media screen and (min-width: 768px) {
     padding: 4.8rem;
 
+    .port {
+      font-size: 2rem;
+    }
+
     .menu {
       display: block;
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 4rem 18rem;
 
     .port {
@@ -52,25 +56,26 @@ const NavbarWrapper = styled.nav`
 
 const TextMenu = styled.div`
   display: none;
-  color: ${({ theme }) => theme.colors.text};
   user-select: none;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     gap: 6rem;
 
-    span {
+    a {
       font-size: 1.8rem;
       font-weight: 400;
       cursor: pointer;
+      color: ${({ theme }) => theme.colors.text};
     }
   }
 
   @media screen and (min-width: 1660px) {
     gap: 7rem;
 
-    span {
+    a {
       font-size: 2.4rem;
+      color: ${({ theme }) => theme.colors.text};
     }
   }
 `;
@@ -83,10 +88,10 @@ const Navbar = () => {
         <List size={24} />
       </div>
       <TextMenu>
-        <span>Home</span>
-        <span>Sobre mim</span>
-        <span>Experiencias</span>
-        <span>Projetos</span>
+        <a href="#home">Home</a>
+        <a href="#about-me">Sobre mim</a>
+        <a href="#experiences">Experiencias</a>
+        <a href="#projects">Projetos</a>
       </TextMenu>
     </NavbarWrapper>
   );

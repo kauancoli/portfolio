@@ -7,10 +7,7 @@ const ExperiencesWrapper = styled.section`
   padding: 2.4rem;
 
   .container {
-    @media screen and (min-width: 768px) {
-    }
-
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       display: flex;
       justify-content: space-between;
       gap: 8rem;
@@ -18,9 +15,10 @@ const ExperiencesWrapper = styled.section`
   }
 
   @media screen and (min-width: 768px) {
+    padding: 4.8rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 10rem 18rem;
   }
 
@@ -45,10 +43,7 @@ const TabsWrapper = styled.div`
   display: flex;
   margin-bottom: 1rem;
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -56,9 +51,7 @@ const TabsWrapper = styled.div`
 
 const Tab = styled.div<{ isSelected: boolean }>`
   flex: 1;
-
   text-align: center;
-
   padding: 1rem;
 
   background-color: ${({ isSelected }) =>
@@ -74,9 +67,11 @@ const Tab = styled.div<{ isSelected: boolean }>`
   margin-bottom: 3.2rem;
 
   @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     text-align: left;
     font-size: 1.8rem;
 
@@ -110,9 +105,11 @@ const ContentWrapper = styled.div`
     margin-bottom: 1.6rem;
 
     @media screen and (min-width: 768px) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       font-size: 2.4rem;
     }
     @media screen and (min-width: 1660px) {
@@ -138,9 +135,10 @@ const ContentWrapper = styled.div`
       color: ${({ theme }) => theme.colors.title};
 
       @media screen and (min-width: 768px) {
+        font-size: 1.6rem;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1280px) {
         font-size: 1.6rem;
       }
       @media screen and (min-width: 1660px) {
@@ -161,9 +159,10 @@ const ContentWrapper = styled.div`
     color: ${({ theme }) => theme.colors.text};
 
     @media screen and (min-width: 768px) {
+      font-size: 1.6rem;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       font-size: 1.8rem;
     }
     @media screen and (min-width: 1660px) {
@@ -189,7 +188,7 @@ const Tooltip = styled.span`
   position: relative;
   display: none;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     display: block;
   }
 
@@ -211,6 +210,11 @@ const Tooltip = styled.span`
 
     border-radius: 0.4rem;
     padding: 1.2rem;
+
+    @media screen and (min-width: 1660px) {
+      font-size: 1.6rem;
+      bottom: 90%;
+    }
   }
 
   &:hover .tooltiptext {
@@ -227,7 +231,7 @@ const Experiences = () => {
   };
 
   return (
-    <ExperiencesWrapper>
+    <ExperiencesWrapper id="experiences">
       <Title>EXPERIÊNCIA</Title>
       <div className="container">
         <TabsWrapper>
@@ -314,7 +318,7 @@ const Experiences = () => {
               <h1>Desenvolvedor de Software</h1>
               <div>
                 <p className="brand">Mental Guild</p>
-                <p>Abr 2022 - Nov 2023</p>
+                <p>Abr 2022 - Nov 2022</p>
               </div>
               <p>
                 Atuei com as seguintes atividades: Utilização de ferramentas
