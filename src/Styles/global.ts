@@ -30,12 +30,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background-color: hsl(0, 0%, 98%);
-    border-radius: 25px;
+    background-color: #121212;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: hsl(207, 26%, 17%);
+    background-color: #181818;
   }
 `;
 
