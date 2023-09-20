@@ -60,7 +60,7 @@ const projectsData = [
       'Phosphor',
     ],
     imageSrc: 'Portfolio.png',
-    deploy: '#',
+    deploy: 'https://portfolio-kauancoli.vercel.app/',
     repo: 'https://github.com/kauancoli/portfolio',
   },
 ];
