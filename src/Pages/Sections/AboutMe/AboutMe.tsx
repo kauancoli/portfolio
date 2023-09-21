@@ -12,12 +12,13 @@ const AboutMe = () => {
         <div>
           <S.Head>São Vicente, Brasil</S.Head>
           <S.Description>
-            Tenho experiência no desenvolvimento web, trabalhando com WordPress,
-            Elementor, MySQL, PHP e JavaScript. Atualmente, atuo como
-            Desenvolvedor Front-End, concentrando-me em JavaScript, React,
-            TypeScript e Node.js. Estou constantemente buscando aprender novas
-            tecnologias, com foco atual em aprimorar o TypeScript e explorando o
-            Node.js, além de outras tecnologias relacionadas ao BackEnd.
+            Olá! Eu sou Kauan Coli, um apaixonado pelo desenvolvimento de
+            aplicações web e sempre em busca de soluções criativas para desafios
+            relacionados ao Frontend. Comecei minha carreira trabalhando com
+            WordPress e Elementor, MySQL, PHP e JavaScript. Depois disso, como
+            Desenvolvedor Frontend Jr, onde trabalhei com diversas tecnologias
+            como: JavaScript, React, TypeScript, Next.js, React Native. No
+            momento estou expandindo minha área de atuação para o Backend
           </S.Description>
         </div>
         <div>
