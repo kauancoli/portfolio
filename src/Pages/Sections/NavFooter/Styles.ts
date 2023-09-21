@@ -1,8 +1,25 @@
-// src/components/NavBar.tsx
-import { List } from '@phosphor-icons/react';
 import styled from 'styled-components';
 
-const NavbarWrapper = styled.nav`
+export const FooterWrapper = styled.footer`
+  display: flex;
+  justify-content: center;
+  padding: 2.4rem;
+  user-select: none;
+  color: ${({ theme }) => theme.colors.title};
+
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 1660px) {
+    font-size: 2rem;
+  }
+`;
+
+export const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +46,7 @@ const NavbarWrapper = styled.nav`
     }
 
     .menu {
-      display: block;
+      display: none;
     }
   }
 
@@ -54,22 +71,29 @@ const NavbarWrapper = styled.nav`
   }
 `;
 
-const TextMenu = styled.div`
+export const TextMenu = styled.div`
   display: none;
   user-select: none;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 6rem;
 
     a {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 400;
       cursor: pointer;
       color: ${({ theme }) => theme.colors.text};
     }
   }
+  @media screen and (min-width: 1280px) {
+    gap: 7rem;
 
+    a {
+      font-size: 1.8rem;
+      color: ${({ theme }) => theme.colors.text};
+    }
+  }
   @media screen and (min-width: 1660px) {
     gap: 7rem;
 
@@ -79,22 +103,3 @@ const TextMenu = styled.div`
     }
   }
 `;
-
-const Navbar = () => {
-  return (
-    <NavbarWrapper>
-      <div className="port">Portfólio</div>
-      <div className="menu">
-        <List size={24} />
-      </div>
-      <TextMenu>
-        <a href="#home">Home</a>
-        <a href="#about-me">Sobre mim</a>
-        <a href="#experiences">Experiencias</a>
-        <a href="#projects">Projetos</a>
-      </TextMenu>
-    </NavbarWrapper>
-  );
-};
-
-export default Navbar;

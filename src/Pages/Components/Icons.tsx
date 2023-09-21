@@ -1,3 +1,4 @@
+// src/Pages/Components/Icons.tsx
 import { PhosphorLogo } from '@phosphor-icons/react';
 import {
   SiAdobephotoshop,
