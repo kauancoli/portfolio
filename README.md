@@ -12,7 +12,7 @@ Feito com o intuito de mostrar meus principais projetos pessoais criados ao long
 </ul>
   
 
-![image](https://github.com/kauancoli/portfolio/assets/62157364/5b5ede00-5772-49d0-9579-0eac520d0ac7)
+![image](https://github.com/kauancoli/portfolio/assets/62157364/c074f4c4-626f-4729-84e5-738e90bb531f)
 
 
 ## Author
