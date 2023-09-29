@@ -1,13 +1,9 @@
-import { List } from '@phosphor-icons/react';
 import * as S from './Styles';
 
 const Navbar = () => {
   return (
     <S.NavbarWrapper>
       <div className="port">Portfólio</div>
-      <div className="menu">
-        <List size={24} />
-      </div>
 
       <S.TextMenu>
         <a href="#home">Home</a>

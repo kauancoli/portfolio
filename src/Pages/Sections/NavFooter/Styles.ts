@@ -32,21 +32,11 @@ export const NavbarWrapper = styled.nav`
     color: ${({ theme }) => theme.colors.brand};
   }
 
-  .menu {
-    color: ${({ theme }) => theme.colors.title};
-    display: block;
-    cursor: pointer;
-  }
-
   @media screen and (min-width: 768px) {
     padding: 4.8rem;
 
     .port {
       font-size: 2rem;
-    }
-
-    .menu {
-      display: none;
     }
   }
 
@@ -55,10 +45,6 @@ export const NavbarWrapper = styled.nav`
 
     .port {
       font-size: 2.4rem;
-    }
-
-    .menu {
-      display: none;
     }
   }
 
